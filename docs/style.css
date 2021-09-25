@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+:root {
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan1: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Main Site CSS  */
+
+body {
+  background-color: #c5e4e7;
+}
+
+.main-header {
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header h1 {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 10px;
+  color: #3d6666;
+  font-weight: 700;
+}
+
+.container {
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  padding: 32px 24px;
+}
+
+.bill-section {
+  width: 100%;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+#bill,
+#people {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 5px;
+  background-color: #f3f9fa;
+  outline: none;
+  border: none;
+  color: hsl(186, 14%, 43%);
+}
+
+.tip-label {
+  margin-bottom: 16px;
+  color: hsl(186, 14%, 43%);
+}
+
+.tip-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.tip-btn {
+  height: 48px;
+  width: 100%;
+  background-color: #00474b;
+  color: white;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.people-section {
+  width: 100%;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.calc-container {
+  background-color: #00474b;
+  border-radius: 15px;
+  padding: 32px 22px 24px 22px;
+}
+
+.read-out {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.reset-btn {
+  width: 100%;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #26c2ae;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  font-weight: bold;
+}
