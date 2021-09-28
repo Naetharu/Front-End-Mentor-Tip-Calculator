@@ -6,7 +6,6 @@
 
 html,
 body {
-  min-height: 100vh;
   font-family: "Space Mono", monospace;
   font-weight: 700;
 }
@@ -24,101 +23,169 @@ body {
 
 body {
   background-color: #c5e4e7;
+  text-align: center;
 }
 
 .main-header {
-  height: 144px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-header h1 {
-  text-transform: uppercase;
-  font-size: 22px;
-  letter-spacing: 10px;
-  color: #3d6666;
+  font-family: "Space Mono", monospace;
   font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #3d6666;
 }
 
 .container {
   background-color: white;
   border-radius: 25px 25px 0 0;
-  padding: 32px 24px;
+  padding: 32px;
 }
 
-.bill-section {
-  width: 100%;
+/* BILL SECTION */
+
+.inputter {
   height: 78px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
   margin-bottom: 32px;
 }
 
-#bill,
-#people {
-  font-family: "Space Mono", monospace;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 5px;
-  background-color: #f3f9fa;
-  outline: none;
-  border: none;
-  color: hsl(186, 14%, 43%);
+.icon {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
 }
 
+label {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  color: #5e7a7d;
+  text-align: left;
+}
+
+input {
+  height: 48px;
+  width: 100%;
+  background-color: #f3f9fa;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  color: #00474b;
+  font-weight: bold;
+  padding: 0 18px;
+}
+
+/* TIP SECTION */
 .tip-label {
+  text-align: left;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  color: #5e7a7d;
   margin-bottom: 16px;
-  color: hsl(186, 14%, 43%);
 }
 
 .tip-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
   margin-bottom: 32px;
 }
 
 .tip-btn {
   height: 48px;
-  width: 100%;
   background-color: #00474b;
   color: white;
   font-family: "Space Mono", monospace;
   font-size: 24px;
-  border: none;
-  outline: none;
+  font-weight: 700;
   border-radius: 5px;
+  border: none;
 }
 
-.people-section {
-  width: 100%;
-  height: 78px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
-}
+/* CALC SECTION*/
 
-.calc-container {
+.output-section {
   background-color: #00474b;
   border-radius: 15px;
-  padding: 32px 22px 24px 22px;
+  padding: 37px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .read-out {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  color: white;
 }
 
 .reset-btn {
-  width: 100%;
+  margin-top: 32px;
   height: 48px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
+  width: 100%;
   background-color: #26c2ae;
-  color: hsl(183, 100%, 15%);
+  color: #00474b;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.read-out-words-top {
+  font-size: 16px;
+  text-align: left;
+}
+
+.read-out-words-bottom {
+  font-size: 13px;
+  text-align: left;
+  color: #7f9d9f;
+}
+
+.read-out-result {
+  font-size: 32px;
+  color: #26c2ae;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 920px;
+    display: flex;
+    border-radius: 25px;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .input-section {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tip-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .output-section {
+    width: 47%;
+    padding: 40px;
+  }
 }

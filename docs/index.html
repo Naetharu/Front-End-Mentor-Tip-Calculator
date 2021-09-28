@@ -16,42 +16,62 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <div class="main-header">
-      <h1>Spli<br />tter</h1>
-    </div>
+    <h1 class="main-header">Spli<br />tter</h1>
 
     <div class="container">
-      <div class="bill-section">
-        <label for="bill">Bill</label>
-        <input id="bill" type="text" onChange="updateBill()" />
-      </div>
+      <div class="input-section">
+        <div class="inputter">
+          <img
+            class="icon"
+            src="./images/icon-dollar.svg"
+            alt="dollar symbol"
+          />
+          <label for="bill">Bill</label>
+          <input
+            id="bill"
+            class="input-box"
+            type="text"
+            onChange="updateBill()"
+          />
+        </div>
 
-      <p class="tip-label">Select Tip %</p>
-      <div class="tip-section">
-        <button class="tip-btn">5%</button>
-        <button class="tip-btn">10%</button>
-        <button class="tip-btn">15%</button>
-        <button class="tip-btn">25%</button>
-        <button class="tip-btn">50%</button>
-        <input class="tip-btn" type="text" />
-      </div>
+        <p class="tip-label">Select Tip %</p>
+        <div class="tip-section">
+          <button id="5" class="tip-btn">5%</button>
+          <button id="10" class="tip-btn">10%</button>
+          <button id="15" class="tip-btn">15%</button>
+          <button id="25" class="tip-btn">25%</button>
+          <button id="50" class="tip-btn">50%</button>
+          <input
+            id="custom-tip"
+            class="tip-btn input-box"
+            type="text"
+            onChange="customTip()"
+          />
+        </div>
 
-      <div class="people-section">
-        <label for="people">Number of People</label>
-        <input id="people" type="text" onChange="updatePeople()" />
+        <div class="inputter">
+          <img class="icon" src="./images/icon-person.svg" alt="person icon" />
+          <label for="people">Number of People</label>
+          <input
+            id="people"
+            class="input-box"
+            type="text"
+            onChange="updatePeople()"
+          />
+        </div>
       </div>
-
-      <div class="calc-container">
+      <div class="output-section">
         <div class="read-out">
           <div class="read-out-words">
             <p class="read-out-words-top">Tip Amount</p>
             <p class="read-out-words-bottom">/ person</p>
           </div>
-          <p class="read-out-result">£10.00</p>
+          <p class="read-out-result" id="per-result">£10.00</p>
         </div>
 
         <div class="read-out">
@@ -59,10 +79,10 @@
             <p class="read-out-words-top">Total</p>
             <p class="read-out-words-bottom">/ person</p>
           </div>
-          <p class="read-out-result">£20.00</p>
+          <p class="read-out-result" id="total-result">£20.00</p>
         </div>
 
-        <button class="reset-btn">RESET</button>
+        <button class="reset-btn" onClick="reset()">RESET</button>
       </div>
     </div>
 
@@ -72,5 +92,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="./script.js"></script>
   </body>
 </html>
