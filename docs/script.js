@@ -5,7 +5,7 @@ let tip = 5;
 
 const updateResults = () => {
   let tipPerPerson = ((bill / 100) * tip) / people;
-  let totalPerPerson = bill / people;
+  let totalPerPerson = bill / people + tipPerPerson;
   document.getElementById("per-result").innerText =
     "$" + tipPerPerson.toFixed(2);
   document.getElementById("total-result").innerText =
