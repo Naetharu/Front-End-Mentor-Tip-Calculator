@@ -41,6 +41,8 @@ body {
   background-color: white;
   border-radius: 25px 25px 0 0;
   padding: 32px;
+  max-width: 500px;
+  margin: auto;
 }
 
 /* BILL SECTION */
@@ -111,6 +113,23 @@ input {
   border: none;
 }
 
+.tip-btn:active {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+.tip-btn:focus {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+#custom-tip {
+  background-color: #f3f9fa;
+  font-size: 24px;
+  color: #547878;
+  text-align: center;
+}
+
 /* CALC SECTION*/
 
 .output-section {
@@ -157,7 +176,7 @@ input {
   color: #26c2ae;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
   body {
     display: flex;
     flex-direction: column;
@@ -165,6 +184,7 @@ input {
   }
 
   .container {
+    max-width: 920px;
     width: 920px;
     display: flex;
     border-radius: 25px;

@@ -41,6 +41,7 @@ const customTip = () => {
     tip = number.toFixed(2);
   }
 
+  document.getElementById("custom-tip").value = input + "%";
   updateResults();
 };
 
