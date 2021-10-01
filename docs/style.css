@@ -8,6 +8,7 @@ html,
 body {
   font-family: "Space Mono", monospace;
   font-weight: 700;
+  min-height: 100vh;
 }
 
 :root {
@@ -176,11 +177,30 @@ input {
   color: #26c2ae;
 }
 
+.attribution {
+  font-size: 8px;
+  position: absolute;
+  bottom: -100px;
+  left: 100px;
+  color: hsl(186, 14%, 43%);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #444;
+}
+
 @media only screen and (min-width: 1000px) {
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .main-header {
+    margin: 87px;
   }
 
   .container {
@@ -190,6 +210,8 @@ input {
     border-radius: 25px;
     align-items: stretch;
     justify-content: space-between;
+    margin: 0;
+    margin-bottom: 200px;
   }
 
   .input-section {
@@ -207,5 +229,12 @@ input {
   .output-section {
     width: 47%;
     padding: 40px;
+  }
+
+  .attribution {
+    font-size: 8px;
+    position: absolute;
+    bottom: 10px;
+    color: hsl(186, 14%, 43%);
   }
 }
