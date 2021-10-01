@@ -199,7 +199,7 @@ input {
   }
 
   .main-header {
-    margin: 87px;
+    margin: 0px;
   }
 
   .container {
@@ -209,7 +209,8 @@ input {
     border-radius: 25px;
     align-items: stretch;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin: 0px;
+    margin-top: 60px;
   }
 
   .input-section {
